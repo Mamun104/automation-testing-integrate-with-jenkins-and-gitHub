@@ -247,8 +247,8 @@ However, If a custom path for Jenkins installation was selected, then you should
 - Now clone your repository in any drive and locate the project in the script field by this command:
 - 
            d:
-           cd "Automation_Work\API Automation\axios-demo-api-test"
-           npm test file .\customers.test.js
+           cd "Automation_Work\seleniumJava\jenkinsIntegrateWithGithub"
+           gradle clean test
 
 - Now save the configuration
 - Click on Build Now button and you will see the project is running throw Jenkins in the build history.
