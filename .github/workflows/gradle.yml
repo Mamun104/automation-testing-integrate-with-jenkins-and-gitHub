@@ -30,21 +30,3 @@ jobs:
     - name: Run tests
       run: gradle clean test
 
-    - name: Package application
-      run: ./gradlew assemble
-
-    - name: Archive build artifacts
-      if: success()
-      uses: actions/upload-artifact@v2
-      with:
-        name: build-artifacts
-        path: |
-          build/libs/**/*.jar
-          build/reports/tests/test/index.html
-
-    - name: Publish Test Report
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-report
-        path: build/reports/tests/test
